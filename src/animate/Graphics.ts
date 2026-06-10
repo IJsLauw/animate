@@ -380,6 +380,20 @@ export class AnimateGraphics extends Graphics
     public t = this.setTransform;
 
     /**
+     * v8 removed Container#name in favor of label; published animate assets
+     * assign `.name` directly, so keep it as a first-class alias (no
+     * deprecation warning).
+     */
+    public get name(): string
+    {
+        return this.label;
+    }
+    public set name(value: string)
+    {
+        this.label = value;
+    }
+
+    /**
      * Setter for mask to be able to chain.
      * @param mask - The mask shape to use
      * @return Instance for chaining
