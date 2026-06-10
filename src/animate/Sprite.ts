@@ -1,6 +1,4 @@
-import { Sprite } from '@pixi/sprite';
-import { Graphics } from '@pixi/graphics';
-import { ColorMatrixFilter } from '@pixi/filter-color-matrix';
+import { Sprite, Graphics, ColorMatrixFilter } from 'pixi.js';
 import { utils } from './utils';
 
 /**
@@ -31,7 +29,17 @@ export class AnimateSprite extends Sprite
     /**
      * Shortcut for `setTransform`.
      */
-    public t = super.setTransform;
+    public setTransform(x = 0, y = 0, scaleX = 1, scaleY = 1, rotation = 0, skewX = 0, skewY = 0, pivotX = 0, pivotY = 0): this
+    {
+        this.position.set(x, y);
+        this.scale.set(scaleX, scaleY);
+        this.rotation = rotation;
+        this.skew.set(skewX, skewY);
+        this.pivot.set(pivotX, pivotY);
+
+        return this;
+    }
+    public t = this.setTransform;
 
     /**
      * Setter for mask to be able to chain.

@@ -14,7 +14,10 @@
     }
   },
   "extensionConfig": {
-    "namespace": "PIXI.animate"
+    "namespace": "PIXI.animate",
+    "globals": {
+      "pixi.js": "PIXI"
+    }
   },
   "contributors": [
     "Matt Karl <matt@mattkarl.com>",
@@ -24,22 +27,10 @@
   ],
   "devDependencies": {
     "@pixi/extension-scripts": "^1.7.0",
-    "pixi.js": "^7.1.1"
+    "pixi.js": "^8.19.0"
   },
   "peerDependencies": {
-    "@pixi/app": "^7.0.1",
-    "@pixi/assets": "^7.0.1",
-    "@pixi/core": "^7.0.1",
-    "@pixi/display": "^7.0.1",
-    "@pixi/filter-color-matrix": "^7.0.1",
-    "@pixi/graphics": "^7.0.1",
-    "@pixi/prepare": "^7.0.1",
-    "@pixi/settings": "^7.0.1",
-    "@pixi/sprite": "^7.0.1",
-    "@pixi/spritesheet": "^7.0.1",
-    "@pixi/text": "^7.0.1",
-    "@pixi/ticker": "^7.0.1",
-    "@pixi/utils": "^7.0.1"
+    "pixi.js": "^8.0.0"
   },
   "repository": {
     "type": "git",
